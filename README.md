@@ -5,7 +5,7 @@ Un bot sencillo para WhatsApp hecho con cariño
 Pensado para ayudar sin complicaciones y funcionar rápido  
 Hecho para quienes buscan algo simple pero confiable  
 
-<h1 align="center">AZUMI-BOT💨</h1>
+<h1 align="center">Mao Chan 🌿</h1>
  <p align="center">🌟 déjanos tu super estrella</p>
 </p>
 
