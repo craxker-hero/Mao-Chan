@@ -56,7 +56,7 @@ const help = Object.values(global.plugins)
   }))
 
 let nombreBot = global.namebot || 'Bot'
-let bannerFinal = './storage/img/menu.jpg'
+let bannerFinal = 'https://iili.io/FrbNIr7.jpg'
 
 const botActual = conn.user?.jid?.split('@')[0].replace(/\D/g, '')
 const configPath = join('./JadiBots', botActual, 'config.json')
