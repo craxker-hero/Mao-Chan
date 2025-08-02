@@ -15,6 +15,9 @@
 
 </p>
 
+> [!IMPORTANT]
+> **Si planeas instalar o extraer el bot, recuerda que su venta está estrictamente prohibida bajo cualquier circunstancia. El uso del bot con fines de venta constituye una violación de los términos de nuestro repositorio y se tomarán las medidas necesarias contra quienes incumplan estas condiciones.**
+
 ### **`❕️Información importante`**
 
 <details>
