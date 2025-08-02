@@ -49,8 +49,8 @@
 
 ### 🌳 Creador
 <a
-href="https://github.com/Izumi-kzx"><img src="https://github.com/Izumi-kzx.png" width="130" height="130" alt="Angelito"/></a>
+href="https://github.com/Izumi-kzx"><img src="https://github.com/Izumi-kzx.png" width="130" height="130" alt="Izumi"/></a>
 
-> Copyright (c) 2025 **[Angelito-OFC](https://whatsapp.com/channel/0029VaJxgcB0bIdvuOwKTM2Y)**.
+> Copyright (c) 2025 **[Izumi-Core](https://whatsapp.com/channel/0029VaJxgcB0bIdvuOwKTM2Y)**.
 
 **`¡GRACIAS POR PREFERIR ESTE PROYECTO!` ☕**
