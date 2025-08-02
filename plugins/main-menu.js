@@ -123,7 +123,7 @@ const _text = [
       help.filter(menu => menu.tags?.includes(tag)).map(menu =>
         menu.help.map(helpText =>
           menuConfig.body
-            .replace(/%cmd/g, menu.prefix ? helpText : `${_p}${helpText}`)
+            .replace(/%cmd/g, menu.prefix ? help : '%_p' + help)
             .replace(/%islimit/g, menu.limit ? '◜⭐◞' : '')
             .replace(/%isPremium/g, menu.premium ? '◜🪪◞' : '')
             .trim()
