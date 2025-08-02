@@ -47,7 +47,7 @@ const defaultMenu = {
 > 👋 Hola *%taguser*, %greeting
 
 ◦ Fecha: %date
- ◦ Modo: Público
+◦ Modo: Público
 ◦ Run: %uptime*
 ◦ Creador: @${ownerMention}
 ◦ Prefix: ( ! ~ . / )
