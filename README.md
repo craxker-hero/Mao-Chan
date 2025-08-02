@@ -18,16 +18,6 @@
 > [!IMPORTANT]
 > **Este proyecto ha sido desarrollado con un enfoque en la simplicidad y eficiencia. Su uso con fines comerciales está estrictamente prohibido, ya que infringe nuestros términos de uso y políticas de privacidad.**
 
-### **`❕️Información importante`**
-
-<details>
- <summary><b> 🤍 Nota Importante </b></summary>
-
-Este proyecto **no está afiliado de ninguna manera** con `WhatsApp`, `Inc. WhatsApp` es una marca registrada de `WhatsApp LLC`, y este bot es un **desarrollo independiente** que **no tiene ninguna relación oficial con la companía**.
-
-</details>
-
-
 ### <img src="https://i.pinimg.com/originals/19/80/6e/19806e91932e6054965fc83b85241270.gif" alt="Prueba La Bot Aqui" width="42" height="42"> **`Instala Genesis Aqui`**
 
 
