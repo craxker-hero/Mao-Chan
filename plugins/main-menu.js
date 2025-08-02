@@ -19,14 +19,16 @@ const tags = {
   fun: '😂 DIVERSIÓN',
 }
 
+const owner = '59897246324@s.whatsapp.net';
+const ownerMention = owner.split('@')[0];
+const creatorNumber = '59897246324';
 const defaultMenu = {
   before: `
-> 🌟 *Hola, soy %botname*\n> _%tipo_
-
-> 👋 Hola *%name*, %greeting
+> 👋 Hola *%taguser*, %greeting
 
 > 📅 Fecha: *%date*
 > ⏳ Uptime: *%uptime*
+> 🌿 Creador: @${ownerMention}
 %readmore`.trimStart(),
 
   header: '\n*%category* 💚',
@@ -129,7 +131,8 @@ const imageContent = isURL
 await conn.sendMessage(m.chat, {
   ...imageContent,
   caption: text.trim(),
-  mentionedJid: conn.parseMention(text)
+  mentionedJid: [m.sender, owner ],
+//  mentionedJid: conn.parseMention(text)
 }, { quoted: m })
 
 } catch (e) {
