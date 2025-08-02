@@ -12,8 +12,11 @@
 <a href="https://www.threads.net/@angelito.kzx" target="blank"><img src="https://img.shields.io/badge/Threads-30302f?style=flat&logo=threads" /></a>
 <a href="https://x.com/usxr_angelito0" target="blank"><img src="https://img.shields.io/badge/Twitter-30302f?style=flat&logo=x" /></a>
 
+----
+## Instalación por Termux
 > [!IMPORTANT]
-> **Este proyecto está en constante evolución. Estamos comprometidos en ofrecer a nuestra comunidad un Bot increíble. Te invitamos a instalarlo y para estar al tanto de todas las novedades. [¡Únete a nuestro nuevo canal!](https://whatsapp.com/channel/0029VatPwXw7Noa8n1Vinx3g)**
+> **No garantizamos un funcionamiento perfecto en Termux, aunque trabajamos constantemente para asegurar una buena compatibilidad. Si experimentas lentitud o errores, por favor envía una solicitud con la evidencia correspondiente para que nuestro equipo pueda solucionarlo. Si el problema persiste, te recomendamos considerar los servicios de alojamiento de bots de nuestros patrocinadores.**
 
-<p align="center"> 
+<details>
+  <summary><b>Instalación Automática</b></summary>
 ---
