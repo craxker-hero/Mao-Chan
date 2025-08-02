@@ -51,7 +51,7 @@ const defaultMenu = {
 » 𝖱𝗎𝗇 : [%uptime]
 » 𝖢𝗋𝖾𝖺𝖽𝗈𝗋 : @${ownerMention}
 » 𝖯𝗋𝖾𝖿𝗂𝗑 : ( # )
-» 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 : 155
+» 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 : %totalf
 » 𝖡𝗈𝗍 𝖵𝖾𝗋𝗌𝗂𝗈𝗇 : 1.0.0-beta
 
 %readmore`.trimStart(),
@@ -67,6 +67,17 @@ try {
 const { exp, limit, level } = global.db.data.users[m.sender]
 const { min, xp, max } = xpRange(level, global.multiplier)
 const name = await conn.getName(m.sender)
+
+const totalf = Object.values(global.plugins).reduce((total, plugin) => {
+  if (plugin.command) {
+    if (Array.isArray(plugin.command)) {
+      return total + plugin.command.length;
+    } else {
+      return total + 1;
+    }
+  }
+  return total;
+}, 0);
 
 const d = new Date(Date.now() + 3600000)
 const locale = 'es'
@@ -136,6 +147,7 @@ const replace = {
   level,
   limit,
   name,
+  totalf,
   date,
   uptime: clockString(process.uptime() * 1000),
   tipo,
