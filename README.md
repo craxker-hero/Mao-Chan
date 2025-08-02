@@ -14,7 +14,7 @@
 <h1 align="center">Mao Chan 🌿</h1>
 </p>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Oswald+Code&pause=100&color=00FF00&lines=Izumi-kzx+lanzó+la mejor+versión;De+Genesis Ai - 2.0.7;Con+nuevos+comandos+y+mejoras;Genesis+El+Mejor Bot+De+WhatsApp)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Oswald+Code&pause=100&color=00FF00&lines=Izumi-kzx+lanzó+la mejor+versión;De+Genesis Ai - 2.0.7;Con+nuevos+comandos+y+mejoras;Genesis+El+Mejor Bot+De+WhatsApp;)](https://git.io/typing-svg)
 ![Azumi](https://iili.io/FrbNIr7.jpg)
 
 > ⚜️ Versión 3.0.0
