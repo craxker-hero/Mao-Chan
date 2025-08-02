@@ -1,5 +1,3 @@
-<
-
 <h1 align="center">Mao Chan ✨</h1>
 </p>
 
