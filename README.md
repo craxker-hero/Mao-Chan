@@ -18,7 +18,7 @@
 > [!IMPORTANT]
 > **Este proyecto beta ha sido desarrollado con un enfoque en la simplicidad y eficiencia. Su uso con fines comerciales está estrictamente prohibido, ya que infringe nuestros términos de uso y políticas de privacidad.**
 
-***
+
 ### 🌳 Creador
 <a
 href="https://github.com/Izumi-kzx"><img src="https://github.com/Izumi-kzx.png" width="130" height="130" alt="Izumi"/></a>
