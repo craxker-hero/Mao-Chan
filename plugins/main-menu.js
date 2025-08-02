@@ -50,7 +50,7 @@ const defaultMenu = {
 » 𝖬𝗈𝖽𝗈 : Público
 » 𝖱𝗎𝗇 : [%uptime]
 » 𝖢𝗋𝖾𝖺𝖽𝗈𝗋 : @${ownerMention}
-» 𝖯𝗋𝖾𝖿𝗂𝗑 : ( %_p )
+» 𝖯𝗋𝖾𝖿𝗂𝗑 : ( ${_p} )
 » 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 : %totalf
 » 𝖡𝗈𝗍 𝖵𝖾𝗋𝗌𝗂𝗈𝗇 : 1.0.0-beta
 
@@ -123,7 +123,7 @@ const _text = [
       help.filter(menu => menu.tags?.includes(tag)).map(menu =>
         menu.help.map(helpText =>
           menuConfig.body
-            .replace(/%cmd/g, menu.prefix ? help : '%_p' + help)
+            .replace(/%cmd/g, menu.prefix ? helpText : `${_p}${helpText}`)
             .replace(/%islimit/g, menu.limit ? '◜⭐◞' : '')
             .replace(/%isPremium/g, menu.premium ? '◜🪪◞' : '')
             .trim()
