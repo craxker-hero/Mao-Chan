@@ -6,7 +6,7 @@ Pensado para ayudar sin complicaciones y funcionar rápido
 Hecho para quienes buscan algo simple pero confiable  
 
 <h1 align="center">Mao Chan 🌿</h1>
-
+</p>
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=FF0000&lines=Bienvenido+al+Repositorio;azumi+-+Bot+-+MD;Gracias+por+preferirnos;Creado+por+abrahan;💨🔥+BOOM!!!;💨🔥)](https://git.io/typing-svg)
 ![Azumi](https://files.catbox.moe/p1ls5x.jpg)
