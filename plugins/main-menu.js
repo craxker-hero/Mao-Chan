@@ -22,6 +22,26 @@ const tags = {
 const owner = '59897246324@s.whatsapp.net';
 const ownerMention = owner.split('@')[0];
 const creatorNumber = '59897246324';
+
+let estilo = (text, style = 1) => {
+  var xStr = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','1','2','3','4','5','6','7','8','9','0'];
+  var yStr = Object.freeze({
+    1: ['𝖺','𝖻','𝖼','𝖽','𝖾','𝖿','𝗀','𝗁','𝗂','𝗃','𝗄','𝗅','𝗆','𝗇','𝗈','𝗉','𝗊','𝗋','𝗌','𝗍','𝗎','𝗏','𝗐','𝗑','𝗒','𝗓','1','2','3','4','5','6','7','8','9','0']
+  });
+
+  var replacer = [];
+  xStr.map((v, i) => replacer.push({
+    original: v,
+    convert: yStr[style][i]
+  }));
+  var str = text.toLowerCase().split('');
+  var output = [];
+  str.map(v => {
+    const find = replacer.find(x => x.original == v);
+    find ? output.push(find.convert) : output.push(v);
+  });
+  return output.join('');
+};
 const defaultMenu = {
   before: `
 > 👋 Hola *%taguser*, %greeting
@@ -139,7 +159,7 @@ await conn.sendMessage(
   m.chat,
   {
     ...imageContent,
-    caption: text.trim(),
+    caption: estilo(text),
     mentions: [ m.sender, owner ]
   },
   { quoted: m }
