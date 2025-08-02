@@ -18,13 +18,7 @@
 > [!IMPORTANT]
 > **Este proyecto beta ha sido desarrollado con un enfoque en la simplicidad y eficiencia. Su uso con fines comerciales está estrictamente prohibido, ya que infringe nuestros términos de uso y políticas de privacidad.**
 
-### <img src="https://i.pinimg.com/originals/19/80/6e/19806e91932e6054965fc83b85241270.gif" alt="Prueba La Bot Aqui" width="42" height="42"> **`Instala Genesis Aqui`**
-
 ***
-### 🌱 Colaboradores
-
-<a href="https://github.com/Manuel12yt"><img src="https://github.com/Manuel12yt.png" width="100" height="100" alt="DarkCore"/></a>
-
 ### 🌳 Creador
 <a
 href="https://github.com/Izumi-kzx"><img src="https://github.com/Izumi-kzx.png" width="130" height="130" alt="Izumi"/></a>
