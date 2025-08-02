@@ -43,11 +43,11 @@
 > **Si planeas instalar o extraer el bot, recuerda que su venta está estrictamente prohibida bajo cualquier circunstancia. El uso del bot con fines de venta constituye una violación de los términos de nuestro repositorio y se tomarán las medidas necesarias contra quienes incumplan estas condiciones.**
 
 ***
-### ☁️ COLABORADORES
+### 🌱 COLABORADORES
 
 <a href="https://github.com/Manuel12yt"><img src="https://github.com/Manuel12yt.png" width="100" height="100" alt="DarkCore"/></a>
 
-### **`🤍 CREADOR`**
+### 🌳 CREADOR**
 <a
 href="https://github.com/Izumi-kzx"><img src="https://github.com/Izumi-kzx.png" width="130" height="130" alt="Angelito"/></a>
 
