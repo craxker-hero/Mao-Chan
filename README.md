@@ -27,19 +27,6 @@ Este proyecto **no está afiliado de ninguna manera** con `WhatsApp`, `Inc. What
 
 </details>
 
-<details>
- <summary><b> 🤍 Importante </b></summary>
-
-GenesisBot-MD recibe **soporte semanal** si llegas a ver un error **repetitivamente o presenta fallos** solo repórtelo para que lo solucionemos
-
-</details>
-
-<details>
- <summary><b> 🤍 Versión 2.0.0</b></summary>
-
-* **Este proyecto no ofrece soporte oficial para su uso en Termux.** Termux es una aplicación de terminal para Android y, aunque puede ser utilizada para ejecutar diversos programas, **este proyecto no está diseñado ni probado específicamente para funcionar en Termux**. Por lo tanto, **no garantizamos compatibilidad ni soporte técnico en este entorno**.
-
-</details>
 
 ### <img src="https://i.pinimg.com/originals/19/80/6e/19806e91932e6054965fc83b85241270.gif" alt="Prueba La Bot Aqui" width="42" height="42"> **`Instala Genesis Aqui`**
 
