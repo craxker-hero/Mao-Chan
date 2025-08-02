@@ -128,12 +128,22 @@ const imageContent = isURL
   ? { image: { url: bannerFinal } }
   : { image: fs.readFileSync(bannerFinal) }
 
-await conn.sendMessage(m.chat, {
+/* await conn.sendMessage(m.chat, {
   ...imageContent,
   caption: text.trim(),
   mentionedJid: [m.sender, owner ],
 //  mentionedJid: conn.parseMention(text)
-}, { quoted: m })
+}, { quoted: m }) */
+
+await conn.sendMessage(
+  m.chat,
+  {
+    ...imageContent,
+    caption: text.trim(),
+    mentions: [ m.sender, owner ]
+  },
+  { quoted: m }
+)
 
 } catch (e) {
 console.error('❌ Error en el menú:', e)
