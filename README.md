@@ -16,31 +16,9 @@
 </p>
 
 > [!IMPORTANT]
-> **Este proyecto ha sido desarrollado con un enfoque en la simplicidad y eficiencia. Su uso con fines comerciales está estrictamente prohibido, ya que infringe nuestros términos de uso y políticas de privacidad.**
+> **Este proyecto beta ha sido desarrollado con un enfoque en la simplicidad y eficiencia. Su uso con fines comerciales está estrictamente prohibido, ya que infringe nuestros términos de uso y políticas de privacidad.**
 
 ### <img src="https://i.pinimg.com/originals/19/80/6e/19806e91932e6054965fc83b85241270.gif" alt="Prueba La Bot Aqui" width="42" height="42"> **`Instala Genesis Aqui`**
-
-
-### ☁️ SKY ULTRA PLUS
-<a href="https://dash.corinplus.com"><img src="https://qu.ax/zFzXF.png" height="125px"></a>
-
-- **Dashboard:** [`Aquí`](https://dash.skyultraplus.com)
-- **Panel:** [`Aquí`](https://panel.skyultraplus.com)
-- **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029VakUvreFHWpyWUr4Jr0g)
-- **Comunidad:** [`Aquí`](https://chat.whatsapp.com/JPwcXvPEUwlEOyjI3BpYys)
-- **Contacto(s):** 
-[`Gata Dios`](https://wa.me/message/B3KTM5XN2JMRD1)  [`Russell`](https://api.whatsapp.com/send/?phone=15167096032&text&type=phone_number&app_absent=0)
-- **Discord:** [`SkyUltraPlus`](https://discord.gg/Ph4eWsZ8)
-
-<details>
-<summary>☁️ Ajustes del Servidor - Genesis</summary><img src="https://qu.ax/CepDu.jpg">
-
-</details>
-
-</details>
-
-> [!IMPORTANT]
-> **Si planeas instalar o extraer el bot, recuerda que su venta está estrictamente prohibida bajo cualquier circunstancia. El uso del bot con fines de venta constituye una violación de los términos de nuestro repositorio y se tomarán las medidas necesarias contra quienes incumplan estas condiciones.**
 
 ***
 ### 🌱 Colaboradores
