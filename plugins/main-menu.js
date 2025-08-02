@@ -46,9 +46,13 @@ const defaultMenu = {
   before: `
 > 👋 Hola *%taguser*, %greeting
 
-> 📅 Fecha: *%date*
-> ⏳ Uptime: *%uptime*
-> 🌿 Creador: @${ownerMention}
+◦ Fecha: %date
+ ◦ Modo: Público
+◦ Run: %uptime*
+◦ Creador: @${ownerMention}
+◦ Prefix: ( ! ~ . / )
+◦ Comandos: 155
+◦ Bot Versión: 1.0.0-beta
 %readmore`.trimStart(),
 
   header: '\n*%category* 💚',
