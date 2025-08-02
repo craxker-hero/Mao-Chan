@@ -46,13 +46,14 @@ const defaultMenu = {
   before: `
 > 👋 Hola *%taguser*, %greeting
 
-◦ Fecha: %date
-◦ Modo: Público
-◦ Run: %uptime*
-◦ Creador: @${ownerMention}
-◦ Prefix: ( ! ~ . / )
-◦ Comandos: 155
-◦ Bot Versión: 1.0.0-beta
+» 𝖥𝖾𝖼𝗁𝖺 : %date
+» 𝖬𝗈𝖽𝗈 : Público
+» 𝖱𝗎𝗇 : [%uptime]
+» 𝖢𝗋𝖾𝖺𝖽𝗈𝗋 : @${ownerMention}
+» 𝖯𝗋𝖾𝖿𝗂𝗑 : ( # )
+» 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 : 155
+» 𝖡𝗈𝗍 𝖵𝖾𝗋𝗌𝗂𝗈𝗇 : 1.0.0-beta
+
 %readmore`.trimStart(),
 
   header: '\n*%category* 💚',
