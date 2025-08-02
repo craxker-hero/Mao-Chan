@@ -1,5 +1,5 @@
-# ⚜️ Michi-WaBot ⚜️
-![Michi-IA](https://files.catbox.moe/8zf4yo.png)
+# 🌴 Mao Chan Assistant 
+![Michi-IA](https://iili.io/FrbNIr7.jpg)
 
 Un bot sencillo para WhatsApp hecho con cariño  
 Pensado para ayudar sin complicaciones y funcionar rápido  
