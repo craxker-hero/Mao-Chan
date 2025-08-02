@@ -14,7 +14,7 @@
 <h1 align="center">Mao Chan 🌿</h1>
 </p>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=00FF00&lines=Bienvenido+al+Repositorio;Mao+-+Chan+;Un+Bot+Lite;Creado+por+Izumi;)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Oswald+Code&pause=1000&color=00FF00&lines=Bienvenido+al+Repositorio;Mao+-+Chan+;Un+Bot+Lite;Creado+por+Izumi;)](https://git.io/typing-svg)
 ![Azumi](https://iili.io/FrbNIr7.jpg)
 
 > ⚜️ Versión 3.0.0
