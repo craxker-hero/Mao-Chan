@@ -11,6 +11,7 @@
  <a href="http://www.instagram.com/angelito.kzx" target="blank"><img src="https://img.shields.io/badge/Instagram-30302f?style=flat&logo=instagram" /></a>
 <a href="https://www.threads.net/@angelito.kzx" target="blank"><img src="https://img.shields.io/badge/Threads-30302f?style=flat&logo=threads" /></a>
 <a href="https://x.com/usxr_angelito0" target="blank"><img src="https://img.shields.io/badge/Twitter-30302f?style=flat&logo=x" /></a>
+</div>
 
 ---
 
