@@ -11,7 +11,7 @@
 <a href="https://www.threads.net/@angelito.kzx" target="blank"><img src="https://img.shields.io/badge/Threads-30302f?style=flat&logo=threads" /></a>
 <a href="https://x.com/usxr_angelito0" target="blank"><img src="https://img.shields.io/badge/Twitter-30302f?style=flat&logo=x" /></a>
 
-<h1 align="center">Mao Chan 🌿</h1>
+<h1 align="center">Mao Chan 🍃</h1>
 </p>
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Oswald+Code&pause=100&color=00FF00&lines=Bienvenido+al+Repositorio;Mao+-+Chan+;Un+Bot+Lite+versión+1.0.0-beta;Creado+por+Izumi;)](https://git.io/typing-svg)
