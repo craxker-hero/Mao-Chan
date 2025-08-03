@@ -97,7 +97,7 @@ const handler = async (m, { conn, usedPrefix: _p }) => {
 
     const d = new Date(Date.now() + 3600000)
     const locale = 'es'
-    const date = d.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' })
+    const date = d.toLocaleDateString(locale, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })
 
     const help = Object.values(global.plugins)
       .filter(p => !p.disabled)
@@ -188,7 +188,7 @@ const handler = async (m, { conn, usedPrefix: _p }) => {
       contextInfo: {
         externalAdReply: {
           title: nombreBot,
-          body: 'Bot ultra',
+          body: `${date}`,
           thumbnailUrl: bannerFinal,
           sourceUrl: 'https://whatsapp.com/channel/0029VbArz9fAO7RGy2915k3O',
           mediaType: 1,
