@@ -389,7 +389,7 @@ const imageContent = isURL
   caption: text.trim(),
   mentionedJid: [m.sender, owner ],
 //  mentionedJid: conn.parseMention(text)
-}, { quoted: m }) */
+}, { quoted: m }) 
 
     await conn.sendMessage(m.chat, {
       text: estilo(text),
@@ -414,7 +414,7 @@ const imageContent = isURL
     mentions: [ m.sender, owner ]
   },
   { quoted: m }
-) */
+) 
 
 } catch (e) {
 console.error('❌ Error en el menú:', e)
