@@ -63,7 +63,6 @@ const defaultMenu = {
   before: `
 > 👋 Hola *%taguser*, %greeting
 
-» 𝖥𝖾𝖼𝗁𝖺 : %date
 » 𝖬𝗈𝖽𝗈 : Público
 » 𝖱𝗎𝗇 : [%uptime]
 » 𝖢𝗋𝖾𝖺𝖽𝗈𝗋 : @${ownerMention}
