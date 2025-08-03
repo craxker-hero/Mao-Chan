@@ -175,8 +175,8 @@ const imageContent = isURL
 
     await conn.sendMessage(m.chat, {
       text: estilo(text),
+      mentions: [ m.sender, owner ],
       contextInfo: {
-        mentions: [ m.sender, owner ]
         externalAdReply: {
           title: nombreBot,
           body: 'Bot ultra',
