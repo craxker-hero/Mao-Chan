@@ -217,6 +217,20 @@ const ase = new Date()
 let hour = ase.getHours()
 
 const greetingMap = {
+  0: 'buenas noches 🌙',  1: 'buenas noches 🌙',  2: 'buenas noches 🌙',
+  3: 'buenas noches 🌙',  4: 'buenas noches 🌙',  5: 'buenas noches 🌙',
+  6: 'buenos días 🌞',    7: 'buenos días 🌞',    8: 'buenos días 🌞',
+  9: 'buenos días 🌞',   10: 'buenos días 🌞',   11: 'buenos días 🌞',
+  12: 'buenas tardes 🌅', 13: 'buenas tardes 🌅', 14: 'buenas tardes 🌅',
+  15: 'buenas tardes 🌅', 16: 'buenas tardes 🌅', 17: 'buenas tardes 🌅',
+  18: 'buenas noches 🌙', 19: 'buenas noches 🌙', 20: 'buenas noches 🌙',
+  21: 'buenas noches 🌙', 22: 'buenas noches 🌙', 23: 'buenas noches 🌙',
+}
+
+var greeting = greetingMap[hour] || 'un buen día';
+
+
+/* const greetingMap = {
   0: 'una linda noche 🌙', 1: 'una linda noche 💤', 2: 'una linda noche 🦉',
   3: 'una linda mañana ✨', 4: 'una linda mañana 💫', 5: 'una linda mañana 🌅',
   6: 'una linda mañana 🌄', 7: 'una linda mañana 🌅', 8: 'una linda mañana 💫',
@@ -226,4 +240,4 @@ const greetingMap = {
   18: 'una linda noche 🌙', 19: 'una linda noche 🌃', 20: 'una linda noche 🌌',
   21: 'una linda noche 🌃', 22: 'una linda noche 🌙', 23: 'una linda noche 🌃',
 }
-var greeting = 'espero que tengas ' + (greetingMap[hour] || 'un buen día')
+var greeting = 'espero que tengas ' + (greetingMap[hour] || 'un buen día') */
