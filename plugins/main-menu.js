@@ -173,7 +173,22 @@ const imageContent = isURL
 //  mentionedJid: conn.parseMention(text)
 }, { quoted: m }) */
 
-await conn.sendMessage(
+    await conn.sendMessage(m.chat, {
+      text: estilo(text),
+      contextInfo: {
+        externalAdReply: {
+          title: nombreBot,
+          body: 'Bot ultra',
+          thumbnailUrl: bannerFinal,
+          sourceUrl: 'https://whatsapp.com/channel/0029VbArz9fAO7RGy2915k3O',
+          mediaType: 1,
+          mentions: [ m.sender, owner ]
+          renderLargerThumbnail: true
+        }
+      }
+    }, { quoted: m })
+
+/* await conn.sendMessage(
   m.chat,
   {
     ...imageContent,
@@ -181,7 +196,7 @@ await conn.sendMessage(
     mentions: [ m.sender, owner ]
   },
   { quoted: m }
-)
+) */
 
 } catch (e) {
 console.error('❌ Error en el menú:', e)
