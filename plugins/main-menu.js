@@ -18,6 +18,7 @@ const tags = {
   channel: '📺 CANALES',
   fun: '😂 DIVERSIÓN',
 }
+
 const emojis = {
   serbot: '🌐',
   eco: '💸',
@@ -78,16 +79,13 @@ const handler = async (m, { conn, usedPrefix: _p }) => {
     const { min, xp, max } = xpRange(level, global.multiplier)
     const name = await conn.getName(m.sender)
 
-    // Total de comandos
     const totalf = Object.values(global.plugins)
       .reduce((t, p) => t + (Array.isArray(p.command) ? p.command.length : p.command ? 1 : 0), 0)
 
-    // Fecha y hora
     const d = new Date(Date.now() + 3600000)
     const locale = 'es'
     const date = d.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' })
 
-    // Prepara array de help
     const help = Object.values(global.plugins)
       .filter(p => !p.disabled)
       .map(plugin => ({
@@ -98,7 +96,6 @@ const handler = async (m, { conn, usedPrefix: _p }) => {
         premium: plugin.premium,
       }))
 
-    // Data del bot (nombre, banner, tipo)
     let nombreBot = global.namebot || 'Bot'
     let bannerFinal = 'https://iili.io/FrbNIr7.jpg'
     const botActual = conn.user?.jid.split('@')[0].replace(/\D/g, '')
@@ -106,7 +103,7 @@ const handler = async (m, { conn, usedPrefix: _p }) => {
     if (fs.existsSync(configPath)) {
       try {
         const cfg = JSON.parse(fs.readFileSync(configPath))
-        if (cfg.name)   nombreBot = cfg.name
+        if (cfg.name) nombreBot = cfg.name
         if (cfg.banner) bannerFinal = cfg.banner
       } catch {}
     }
@@ -114,7 +111,6 @@ const handler = async (m, { conn, usedPrefix: _p }) => {
 
     const menuConfig = conn.menu || defaultMenu
 
-    // 3) Generación del texto con inyección de emojis
     const _text = [
       menuConfig.before,
       ...Object.keys(tags).map(tag => {
@@ -140,7 +136,6 @@ const handler = async (m, { conn, usedPrefix: _p }) => {
       menuConfig.after
     ].join('\n')
 
-    // Reemplazos de placeholders globales
     const replace = {
       '%': '%', p: _p, botname: nombreBot,
       taguser: '@' + m.sender.split('@')[0],
@@ -154,7 +149,6 @@ const handler = async (m, { conn, usedPrefix: _p }) => {
       (_, name) => String(replace[name])
     )
 
-    // Envía el menú
     await conn.sendMessage(
       m.chat,
       {
@@ -174,7 +168,6 @@ const handler = async (m, { conn, usedPrefix: _p }) => {
       { quoted: m }
     )
   } catch (e) {
-    console.error('❌ Error en el menú:', e)
     conn.reply(m.chat, '❎ Lo sentimos, el menú tiene un error.', m)
   }
 }
@@ -183,7 +176,6 @@ handler.command = ['menu', 'help', 'menú']
 handler.register = true
 export default handler
 
-// Utilidades
 const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)
 function clockString(ms) {
