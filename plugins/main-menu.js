@@ -175,6 +175,7 @@ const imageContent = isURL
 
     await conn.sendMessage(m.chat, {
       text: estilo(text),
+      mentions: [ m.sender, owner ]
       contextInfo: {
         externalAdReply: {
           title: nombreBot,
@@ -182,7 +183,6 @@ const imageContent = isURL
           thumbnailUrl: bannerFinal,
           sourceUrl: 'https://whatsapp.com/channel/0029VbArz9fAO7RGy2915k3O',
           mediaType: 1,
-          mentions: [ m.sender, owner ]
           renderLargerThumbnail: true
         }
       }
