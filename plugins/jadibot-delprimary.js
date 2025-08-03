@@ -31,7 +31,7 @@ let handler = async (m, { conn, text }) => {
   }
 }
 
-handler.help = ['delprimary <IDgrupoxxxx@g.us>']
+handler.help = ['delprimary \`(IDgrupo(\`']
 handler.tags = ['serbot']
 handler.command = ['delprimary']
 
