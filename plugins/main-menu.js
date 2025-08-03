@@ -65,12 +65,12 @@ const defaultMenu = {
    Ꮚ  ׅ  *%greeting*  ৎ୭
        ׅ ෫%taguser ಒ
 
-» 𝖬𝗈𝖽𝗈 : Público
-» 𝖱𝗎𝗇 : [%uptime]
-» 𝖢𝗋𝖾𝖺𝖽𝗈𝗋 : @${ownerMention}
-» 𝖯𝗋𝖾𝖿𝗂𝗑 : ( ! . / )
-» 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 : %totalf
-» 𝖡𝗈𝗍 𝖵𝖾𝗋𝗌𝗂𝗈𝗈𝗇 : 1.0.0-beta
+𓊪 𛄅⵿۫۫〬🌴𔗄 Nombre : %name
+𓊪 𛄅⵿۫۫〬🌱𔗄 Run : [%uptime]
+𓊪 𛄅⵿۫۫〬🌾𔗄 Owner : @${ownerMention}
+𓊪 𛄅⵿۫۫〬🌷𔗄 Prefix : ( ! . / )
+𓊪 𛄅⵿۫۫〬🌿𔗄 Comandos : %totalf
+𓊪 𛄅⵿۫۫〬🎍𔗄 Versión : 1.0.0-beta
 %readmore`.trimStart(),
   header: '*%category*',
   body: '> %emoji  %cmd %islimit %isPremium',
