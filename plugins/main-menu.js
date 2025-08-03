@@ -56,7 +56,7 @@ let estilo = (text, style = 1) => {
 
 const defaultMenu = {
   before: `
-> 👋 Hola %taguser, %greeting
+> 👋 Hola *%taguser*, %greeting
 
 » 𝖥𝖾𝖼𝗁𝖺 : %date
 » 𝖬𝗈𝖽𝗈 : Público
@@ -136,15 +136,26 @@ const handler = async (m, { conn, usedPrefix: _p }) => {
   ].join('\n')
 
   const replace = {
-    '%': '%', p: _p, botname: nombreBot,
-    taguser: '@' + m.sender.split('@')[0],
-    exp: exp - min, maxexp: xp, totalexp: exp, xp4levelup: max - exp,
-    level, limit, name, totalf, date,
+    '%': '%',
+    p: _p,
+    botname: nombreBot,
+    taguser: `@${m.sender.split('@')[0]}`,
+    exp: exp - min,
+    maxexp: xp,
+    totalexp: exp,
+    xp4levelup: max - exp,
+    level,
+    limit,
+    name,
+    totalf,
+    date,
     uptime: clockString(process.uptime() * 1000),
-    tipo, readmore: readMore, greeting
+    tipo,
+    readmore: readMore,
+    greeting
   }
   const text = _text.replace(
-    new RegExp(`%(${Object.keys(replace).sort((a,b)=>b.length-a.length).join('|')})`, 'g'),
+    new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join('|')})`, 'g'),
     (_, name) => String(replace[name])
   )
 
@@ -152,8 +163,8 @@ const handler = async (m, { conn, usedPrefix: _p }) => {
     m.chat,
     {
       text: estilo(text),
-      mentions: [m.sender, owner],
       contextInfo: {
+        mentionedJid: [m.sender, owner],
         externalAdReply: {
           title: nombreBot,
           body: 'Bot ultra',
@@ -175,22 +186,22 @@ export default handler
 const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)
 function clockString(ms) {
-  const h = isNaN(ms) ? '--' : Math.floor(ms/3600000)
-  const m = isNaN(ms) ? '--' : Math.floor(ms/60000)%60
-  const s = isNaN(ms) ? '--' : Math.floor(ms/1000)%60
-  return [h,m,s].map(v=>v.toString().padStart(2,'0')).join(':')
+  const h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
+  const m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
+  const s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
+  return [h, m, s].map(v => v.toString().padStart(2, '0')).join(':')
 }
 
 const ase = new Date()
 const hour = ase.getHours()
 const greetingMap = {
-  0:'una linda noche 🌙',1:'una linda noche 💤',2:'una linda noche 🦉',
-  3:'una linda mañana ✨',4:'una linda mañana 💫',5:'una linda mañana 🌅',
-  6:'una linda mañana 🌄',7:'una linda mañana 🌅',8:'una linda mañana 💫',
-  9:'una linda mañana ✨',10:'un lindo día 🌞',11:'un lindo día 🌨',
- 12:'un lindo día ❄',13:'un lindo día 🌤',14:'una linda tarde 🌇',
- 15:'una linda tarde 🥀',16:'una linda tarde 🌹',17:'una linda tarde 🌆',
- 18:'una linda noche 🌙',19:'una linda noche 🌃',20:'una linda noche 🌌',
- 21:'una linda noche 🌃',22:'una linda noche 🌙',23:'una linda noche 🌃',
+  0: 'una linda noche 🌙', 1: 'una linda noche 💤', 2: 'una linda noche 🦉',
+  3: 'una linda mañana ✨', 4: 'una linda mañana 💫', 5: 'una linda mañana 🌅',
+  6: 'una linda mañana 🌄', 7: 'una linda mañana 🌅', 8: 'una linda mañana 💫',
+  9: 'una linda mañana ✨', 10: 'un lindo día 🌞', 11: 'un lindo día 🌨',
+  12: 'un lindo día ❄', 13: 'un lindo día 🌤', 14: 'una linda tarde 🌇',
+  15: 'una linda tarde 🥀', 16: 'una linda tarde 🌹', 17: 'una linda tarde 🌆',
+  18: 'una linda noche 🌙', 19: 'una linda noche 🌃', 20: 'una linda noche 🌌',
+  21: 'una linda noche 🌃', 22: 'una linda noche 🌙', 23: 'una linda noche 🌃',
 }
 const greeting = 'espero que tengas ' + (greetingMap[hour] || 'un buen día')
