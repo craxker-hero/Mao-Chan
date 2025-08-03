@@ -70,7 +70,7 @@ const defaultMenu = {
 » 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 : %totalf
 » 𝖡𝗈𝗍 𝖵𝖾𝗋𝗌𝗂𝗈𝗈𝗇 : 1.0.0-beta
 %readmore`.trimStart(),
-  header: '\n*%category*',
+  header: '*%category*',
   body: '> %emoji  %cmd %islimit %isPremium',
   footer: '',
   after: '\n✨ 𝖢𝗋𝖾𝖺𝗍𝖾𝖽 𝖡𝗒 𝖠𝖽𝗈.',
