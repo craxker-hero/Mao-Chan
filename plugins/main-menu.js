@@ -3,9 +3,9 @@ import { join } from 'path'
 import { xpRange } from '../lib/levelling.js'
 
 const tags = {
-  serbot: '🌐 SUBBOTS',
-  eco: '💸 ECONOMÍA',
-  downloader: '⬇️ DESCARGAS',
+  serbot: '⁞)᷼͝ㅤ֯ㅤֶָ֢  🥠 *`𝖩𝖺𝖽ı-ᗷᨣƚ𝗌`*     ׅ🥠ׁ᷒ᮬ    ׅ',
+  eco: '⁞)᷼͝ㅤ֯ㅤֶָ֢  🥧  *`𝖤𝖼ᨣ𝗇ᨣ𝗆ı𝖺`*     ׅ🥧ׁ᷒ᮬ    ׅ',
+  downloader: '⁞)᷼͝ㅤ֯ㅤֶָ֢  🍹  *`𝖣ᨣ𝗐𝗇𝗅ᨣ𝖺𝖽ᧉꭇ𝗌`*     ׅ🍹ׁ᷒ᮬ    ׅ',
   tools: '🛠️ HERRAMIENTAS',
   owner: '👑 PROPIETARIO',
   info: 'ℹ️ INFORMACIÓN',
@@ -20,9 +20,9 @@ const tags = {
 }
 
 const emojis = {
-  serbot: '🌐',
-  eco: '💸',
-  downloader: '⬇️',
+  serbot: '🥠',
+  eco: '🥧',
+  downloader: '🍹',
   tools: '🛠️',
   owner: '👑',
   info: 'ℹ️',
