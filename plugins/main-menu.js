@@ -61,7 +61,9 @@ let estilo = (text, style = 1) => {
 }
 const defaultMenu = {
   before: `
-> 👋 Hola *%taguser*, %greeting
+ㅤᨦ۪۪۪۪ׄ᷼ㅤ֢ㅤׄㅤׅ֟፝ㅤ⋱ㅤ⁝ㅤ⋰ㅤׅ፝֟ㅤׄㅤ֢ㅤ۪۪۪۪ׄ᷼ഒ
+Ꮚ  ׅ  *%greeting*  ৎ୭
+ׅ ෫%taguser ಒ
 
 » 𝖬𝗈𝖽𝗈 : Público
 » 𝖱𝗎𝗇 : [%uptime]
