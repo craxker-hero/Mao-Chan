@@ -73,7 +73,7 @@ const defaultMenu = {
 𓊪 𛄅⵿۫۫〬🎍𔗄 Versión : 1.0.0-beta
 %readmore`.trimStart(),
   header: '*%category*',
-  body: '> %emoji  %cmd %islimit %isPremium',
+  body: '°𓃉𐇽ܳ𓏸%emojiᮬᩬִּ〫᪲۟. %cmd %islimit %isPremium',
   footer: '',
   after: '\n✨ 𝖢𝗋𝖾𝖺𝗍𝖾𝖽 𝖡𝗒 𝖠𝖽𝗈.',
 }
