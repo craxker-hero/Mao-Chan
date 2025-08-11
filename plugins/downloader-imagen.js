@@ -10,28 +10,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     let link = image
 
     await delay(1000)
-
-const buttons = [
-        {
-            buttonId: `.menu`,
-            buttonText: { displayText: "⚜️ Otro" },
-            type: 1
-        }
-    ];
-
-    await conn.sendMessage(
-        m.chat,
-        {
-            image: { link },
-            caption: "Aquí tienes.",
-            buttons: buttons,
-            viewOnce: true
-        },
-        { quoted: m }
-    );
-};
-
-/*    await conn.sendMessage(m.chat, { 
+    await conn.sendMessage(m.chat, { 
         image: { url: link }, 
         caption: `*🔎 Resultado De: ${text}*`, 
         footer: 'homa', 
@@ -43,7 +22,7 @@ const buttons = [
         ],
         viewOnce: true,
         headerType: 4
-    }, { quoted: m }) */
+    }, { quoted: m })
 }
 
 handler.help = ['imagen *<texto>*']
