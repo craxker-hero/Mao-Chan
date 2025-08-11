@@ -1,10 +1,8 @@
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '1';
 import fs from 'fs'
 
-// Forzar carpeta temporal a ./tmp
 process.env.TMPDIR = path.join(process.cwd(), 'tmp')
 
-// Crear la carpeta si no existe
 if (!fs.existsSync(process.env.TMPDIR)) {
   fs.mkdirSync(process.env.TMPDIR, { recursive: true })
 }
