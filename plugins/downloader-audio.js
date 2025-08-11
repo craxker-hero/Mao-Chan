@@ -1,92 +1,152 @@
-// Código creador por github.com/Ado-rgb
-import fetch from "node-fetch";
-import ffmpeg from "fluent-ffmpeg";
-import { tmpdir } from "os";
-import { join } from "path";
-import { writeFile, unlink, readFile } from "fs/promises";
-import fs from "fs";
+import yts from 'yt-search';
+import fetch from 'node-fetch';
+import { prepareWAMessageMedia, generateWAMessageFromContent } from '@whiskeysockets/baileys';
 
-const toSansSerifPlain = (text = "") =>
-  text.split("").map((char) => {
-    const map = {
-      a: "𝖺", b: "𝖻", c: "𝖼", d: "𝖽", e: "𝖾", f: "𝖿", g: "𝗀", h: "𝗁", i: "𝗂",
-      j: "𝗃", k: "𝗄", l: "𝗅", m: "𝗆", n: "𝗇", o: "𝗈", p: "𝗉", q: "𝗊", r: "𝗋",
-      s: "𝗌", t: "𝗍", u: "𝗎", v: "𝗏", w: "𝗐", x: "𝗑", y: "𝗒", z: "𝗓",
-      A: "𝖠", B: "𝖡", C: "𝖢", D: "𝖣", E: "𝖤", F: "𝖥", G: "𝖦", H: "𝖧", I: "𝖨",
-      J: "𝖩", K: "𝖪", L: "𝖫", M: "𝖬", N: "𝖭", O: "𝖮", P: "𝖯", Q: "𝖰", R: "𝖱",
-      S: "𝖲", T: "𝖳", U: "𝖴", V: "𝖵", W: "𝖶", X: "𝖷", Y: "𝖸", Z: "𝖹",
-      0: "𝟢", 1: "𝟣", 2: "𝟤", 3: "𝟥", 4: "𝟦", 5: "𝟧", 6: "𝟨", 7: "𝟩", 8: "𝟪", 9: "𝟫"
-    };
-    return map[char] || char;
-  }).join("");
+const handler = async (m, { conn, args, usedPrefix }) => {
+    if (!args[0]) return conn.reply(m.chat, '➤ \`ACCION MAL USADA\` ❗\n\n> 𝖲𝗂𝗀𝗎𝖾 𝖾𝗌𝗍𝗈𝗌 𝗉𝖺𝗌𝗈𝗌: 𝖨𝗇𝗀𝗋𝖾𝗌𝖺 𝗎𝗇 𝗍𝖾𝗑𝗍𝗈 𝗈 𝖾𝗅 𝗍𝗂́𝗍𝗎𝗅𝗈 𝗉𝖺𝗋𝖺 𝗁𝖺𝖼𝖾𝗋 𝗅𝖺 𝖻𝗎𝗌𝗊𝗎𝖾𝖽𝖺 𝖾𝗇 𝖸𝗈𝗎𝖳𝗎𝖻𝖾 𝗒 𝖲𝗉𝗈𝗍𝗂𝖿𝗒.\n\n» 𝖥𝗈𝗋𝗆𝖺𝗍𝗈 𝖼𝗈𝗋𝗋𝖾𝖼𝗍𝗈:\n#play (texto)\n\n» 𝖤𝗃𝖾𝗆𝗉𝗅𝗈 𝖽𝖾 𝗎𝗌𝗈:\n#play Sólo tu - ozu', m);
 
-const handler = async (m, { conn }) => {
-  if (!m.quoted || !m.quoted.text || !m.quoted.text.includes("乂  M U S I C  -  Y O U T U B E"))
-    return m.reply(toSansSerifPlain("✦ Debes responder a un mensaje que contenga '✧─── ･ ｡ﾟ★: *.✦ .* :★. ───✧'"));
+    await m.react('🕓');
+    try {
+        let searchResults = await searchVideos(args.join(" "));
+        let spotifyResults = await searchSpotify(args.join(" "));
 
-  const linkMatch = m.quoted.text.match(/https?:\/\/(?:www\.)?youtu(?:\.be|be\.com)\/[^\s]+/);
-  if (!linkMatch) return m.reply(toSansSerifPlain("✦ No se encontró un enlace de YouTube en el mensaje citado."));
+        if (!searchResults.length && !spotifyResults.length) throw new Error('No se encontraron resultados.');
 
-  const videoUrl = linkMatch[0];
-  await conn.sendMessage(m.chat, { react: { text: "🕓", key: m.key } });
+        let video = searchResults[0];
+        let thumbnail = await (await fetch(video.miniatura)).buffer();
 
-  try {
-    const res = await fetch(`https://theadonix-api.vercel.app/api/ytmp3?url=${encodeURIComponent(videoUrl)}`);
-    const json = await res.json();
+let messageText = `╭  ✦ \`\`\`Result Play\`\`\` ✦  ╮\n`;
+messageText += `˖✿  *Título :* ${video.titulo || 'No disponible'}\n`;
+messageText += `˖✿  *Duración :* ${video.duracion || 'No disponible'}\n`;
+messageText += `˖✿  *Canal :* ${video.canal || 'Desconocido'}\n`;
+messageText += `˖✿  *Publicado :* ${convertTimeToSpanish(video.publicado)}\n`;
+messageText += `˖✿  *Link :* ${video.url || 'No disponible'}`;
 
-    if (!json.result?.audio) throw "Audio no disponible.";
+        let ytSections = searchResults.slice(1, 11).map((v, index) => ({
+            title: `${index + 1}┃ ${v.titulo}`,
+            rows: [
+                {
+                    title: `🎶 𝖣𝖾𝗌𝖼𝖺𝗋𝗀𝖺𝗋 𝖠𝗎𝖽𝗂𝗈`,
+                    description: `Duración: ${v.duracion || 'No disponible'}`, 
+                    id: `${usedPrefix}ytmp3 ${v.url}`
+                },
+                {
+                    title: `🎥 𝖣𝖾𝗌𝖼𝖺𝗋𝗀𝖺𝗋 𝖵𝗂𝖽𝖾𝗈`,
+                    description: `Duración: ${v.duracion || 'No disponible'}`, 
+                    id: `${usedPrefix}ytmp4 ${v.url}`
+                }
+            ]
+        }));
 
-    const audioResp = await fetch(json.result.audio);
-    const inputPath = join(tmpdir(), `input-${Date.now()}.mp3`);
-    const outputPath = join(tmpdir(), `output-${Date.now()}.mp3`);
+        let spotifySections = spotifyResults.slice(0, 10).map((s, index) => ({
+            title: `${index + 1}┃ ${s.titulo} ┃ ${s.artista}`,
+            rows: [
+                {
+                    title: `🎶 𝖣𝖾𝗌𝖼𝖺𝗋𝗀𝖺𝗋 𝖠𝗎𝖽𝗂𝗈`,
+                    description: `Duración: ${s.duracion || 'No disponible'}`, 
+                    id: `${usedPrefix}spotify ${s.url}`
+                }
+            ]
+        }));
 
-    const fileStream = fs.createWriteStream(inputPath);
-    await new Promise((resolve, reject) => {
-      audioResp.body.pipe(fileStream);
-      audioResp.body.on("error", reject);
-      fileStream.on("finish", resolve);
-    });
+        await conn.sendMessage(m.chat, {
+            image: thumbnail,
+            caption: messageText,
+            footer: dev,
+            contextInfo: {
+                mentionedJid: [m.sender],
+                forwardingScore: 999,
+                isForwarded: true
+            },
+            buttons: [
+                {
+                    buttonId: `${usedPrefix}ytmp3 ${video.url}`,
+                    buttonText: { displayText: '🎧 𝖠𝗎𝖽𝗂𝗈' },
+                    type: 1,
+                },
+                {
+                    buttonId: `${usedPrefix}ytmp4 ${video.url}`,
+                    buttonText: { displayText: '𝖵𝗂𝖽𝖾𝗈 🎥' },
+                    type: 1,
+                },
+                {
+                    type: 4,
+                    nativeFlowInfo: {
+                        name: 'single_select',
+                        paramsJson: JSON.stringify({
+                            title: '𝖱𝖾𝗌𝗎𝗅𝗍𝖺𝖽𝗈𝗌  𝖸𝗈𝗎𝖳𝗎𝖻𝖾 🔍',
+                            sections: ytSections,
+                        }),
+                    },
+                },
+                {
+                    type: 4,
+                    nativeFlowInfo: {
+                        name: 'single_select',
+                        paramsJson: JSON.stringify({
+                            title: '𝖱𝖾𝗌𝗎𝗅𝗍𝖺𝖽𝗈𝗌  𝖲𝗉𝗈𝗍𝗂𝖿𝗒 🔍',
+                            sections: spotifySections,
+                        }),
+                    },
+                },
+            ],
+            headerType: 1,
+            viewOnce: true
+        }, { quoted: m });
 
-    await new Promise((resolve, reject) => {
-      ffmpeg(inputPath)
-        .audioFilter("volume=5,acompressor=threshold=0.2:ratio=20:attack=10:release=250,dynaudnorm=f=150:g=31,firequalizer=gain_entry='entry(60,20);entry(100,15);entry(200,10)'")
-        .audioCodec("libmp3lame")
-        .save(outputPath)
-        .on("end", resolve)
-        .on("error", reject);
-    });
-
-    const processedBuffer = await readFile(outputPath);
-
-    await conn.sendMessage(m.chat, {
-      audio: processedBuffer,
-      fileName: json.result.filename || "audio.mp3",
-      mimetype: "audio/mpeg",
-      ptt: true,
-      contextInfo: {
-        externalAdReply: {
-          title: json.result.title || "Descarga completada",
-          body: "Shadow Ultra Edited",
-          thumbnailUrl: json.result.thumbnail,
-          mediaType: 2,
-          mediaUrl: videoUrl,
-          sourceUrl: videoUrl
-        }
-      }
-    }, { quoted: m });
-
-    await unlink(inputPath).catch(() => {});
-    await unlink(outputPath).catch(() => {});
-
-    await conn.sendMessage(m.chat, { react: { text: "✅", key: m.key } });
-
-  } catch (e) {
-    console.error(e);
-    m.reply(toSansSerifPlain("⚠︎ Error al descargar: ") + e);
-  }
+        await m.react('✅');
+    } catch (e) {
+        console.error(e);
+        await m.react('✖️');
+        conn.reply(m.chat, '*`Error al buscar el video.`*', m);
+    }
 };
 
-handler.customPrefix = /^(audio|Audio)$/i;
-handler.command = new RegExp;
-
+handler.help = ['play *<texto>*'];
+handler.description = ['Descarga audios/videos de YouTube/Spotify'];
+handler.tags = ['dl'];
+handler.command = ['playty'];
 export default handler;
+
+async function searchVideos(query) {
+    try {
+        const res = await yts(query);
+        return res.videos.slice(0, 10).map(video => ({
+            titulo: video.title,
+            url: video.url,
+            miniatura: video.thumbnail,
+            canal: video.author.name,
+            publicado: video.timestamp || 'No disponible',
+            vistas: video.views || 'No disponible',
+            duracion: video.duration.timestamp || 'No disponible'
+        }));
+    } catch (error) {
+        console.error('Error en yt-search:', error.message);
+        return [];
+    }
+}
+
+async function searchSpotify(query) {
+    try {
+        const res = await fetch(`https://delirius-apiofc.vercel.app/search/spotify?q=${encodeURIComponent(query)}`);
+        const data = await res.json();
+        return data.data.slice(0, 10).map(track => ({
+            titulo: track.title,
+            artista: track.artist,
+            url: track.url,
+            duracion: track.duration || 'No disponible'
+        }));
+    } catch (error) {
+        console.error('Error en Spotify API:', error.message);
+        return [];
+    }
+}
+
+function convertTimeToSpanish(timeText) {
+    return timeText
+        .replace(/year/, 'año').replace(/years/, 'años')
+        .replace(/month/, 'mes').replace(/months/, 'meses')
+        .replace(/day/, 'día').replace(/days/, 'días')
+        .replace(/hour/, 'hora').replace(/hours/, 'horas')
+        .replace(/minute/, 'minuto').replace(/minutes/, 'minutos');
+}
