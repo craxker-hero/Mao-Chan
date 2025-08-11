@@ -52,7 +52,7 @@ messageText += `˖✿  *Link :* ${video.url || 'No disponible'}`;
         await conn.sendMessage(m.chat, {
             image: thumbnail,
             caption: messageText,
-            footer: dev,
+            footer: 'izumi-xyz',
             contextInfo: {
                 mentionedJid: [m.sender],
                 forwardingScore: 999,
