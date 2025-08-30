@@ -3,8 +3,10 @@ import chalk from 'chalk'
 import { fileURLToPath } from 'url'
 
 global.owner = [
-  ['59897246324', 'izumi', true],
-]
+  ['59897246324', 'Izumi', true],
+// reconocimiento por Lid
+  ['80363586105441', 'lid', 'izumi', true],
+];
 
 global.mods = []
 global.prems = []
