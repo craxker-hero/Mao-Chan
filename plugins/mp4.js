@@ -1,7 +1,6 @@
 let handler = async (m, { conn }) => {
   const textoDefinido = '@everyone Hola 😀'
 
-  // JID del grupo (si usas el mismo grupo desde el que mandas el comando, es m.chat)
   const groupJid = m.chat.endsWith('@g.us') ? m.chat : '123456789-123456@g.us'
 
   global.ftag = {
@@ -13,9 +12,9 @@ let handler = async (m, { conn }) => {
     },
     message: {
       extendedTextMessage: {
-        text: 'Grupo • S.C.A | StarCore', // aquí pones el nombre que quieres que muestre arriba
+        text: 'S.C.A | StarCore', // simula el título del grupo
         contextInfo: {
-          mentionedJid: [groupJid] // esto hace que se vea como “etiqueta al grupo”
+          mentionedJid: [groupJid]
         }
       }
     }
