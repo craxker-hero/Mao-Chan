@@ -1,32 +1,23 @@
-import axios from 'axios'
+let handler = async (m, { conn }) => {
+  const textoDefinido = 'Este es el texto definido que se enviará junto al quoted.'
 
-let handler = async (m, { conn, text }) => {
-  if (!text) return m.reply('Pásame el link de YouTube')
-
-  try {
-    // Llamada a tu API
-    const apiUrl = `https://myapiadonix.vercel.app/api/hd?url=${encodeURIComponent(text)}`
-    const res = await axios.get(apiUrl)
-
-    if (!res.data || !res.data.success) {
-      return m.reply('No se pudo obtener el video o la API falló')
+  global.ftag = {
+    key: {
+      fromMe: false,
+      participant: m.sender,
+      remoteJid: m.chat,
+      id: 'KHRL-12345'
+    },
+    message: {
+      protocolMessage: {
+        type: 'STATUS_MENTION_MESSAGE'
+      }
     }
-
-    const { title, download } = res.data.data
-
-    // Enviar video directo
-    await conn.sendMessage(m.chat, {
-      video: { url: download },
-      caption: `🎬 *${title}*`,
-      mimetype: 'video/mp4'
-    }, { quoted: m })
-
-  } catch (error) {
-    console.error(error)
-    m.reply('Error al obtener o enviar el video, intenta luego')
   }
+
+  await conn.sendMessage(m.chat, { text: textoDefinido }, { quoted: global.ftag })
 }
 
-handler.command = /^mp4$/i
+handler.command = /^msj$/i
 
 export default handler
