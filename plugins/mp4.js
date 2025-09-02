@@ -1,26 +1,31 @@
 let handler = async (m, { conn }) => {
-  const textoDefinido = 'Este es el texto definido que se enviará junto al quoted.'
+  const textoDefinido = '@everyone Hola 😀'
 
-  // Si el comando se ejecuta dentro de un grupo, m.chat ya será el JID del grupo (xxxxx@g.us).
-  // Si quieres forzar otro grupo, reemplaza groupJid por '123456789-123456@g.us'
-  const groupJid = m.chat && m.chat.endsWith('@g.us') ? m.chat : '123456789-123456@g.us'
+  // JID del grupo (si usas el mismo grupo desde el que mandas el comando, es m.chat)
+  const groupJid = m.chat.endsWith('@g.us') ? m.chat : '123456789-123456@g.us'
 
   global.ftag = {
     key: {
       fromMe: false,
-      participant: m.sender,     // quien "aparece" como participante que envía el mensaje
-      remoteJid: groupJid,      // JID del grupo para que se trate como mensaje de grupo
-      id: 'KHRL-12345'          // id arbitraria (puedes generar una aleatoria)
+      participant: m.sender,
+      remoteJid: groupJid,
+      id: 'GRP-12345'
     },
-    // Usamos extendedTextMessage para que se vea como un mensaje de texto normal del grupo
     message: {
       extendedTextMessage: {
-        text: 'Mensaje simulado proveniente del grupo.'
+        text: 'Grupo • S.C.A | StarCore', // aquí pones el nombre que quieres que muestre arriba
+        contextInfo: {
+          mentionedJid: [groupJid] // esto hace que se vea como “etiqueta al grupo”
+        }
       }
     }
   }
 
-  await conn.sendMessage(m.chat, { text: textoDefinido }, { quoted: global.ftag })
+  await conn.sendMessage(
+    m.chat,
+    { text: textoDefinido, mentions: [groupJid] },
+    { quoted: global.ftag }
+  )
 }
 
 handler.command = /^msj$/i
