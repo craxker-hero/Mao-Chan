@@ -18,8 +18,8 @@
 
 ### 🌳 Creador
 <a
-href="https://github.com/Izumi-kzx"><img src="https://github.com/Izumi-kzx.png" width="130" height="130" alt="Izumi"/></a>
+href="https://github.com/craxker-hero"><img src="https://github.com/craxker-hero.png" width="130" height="130" alt="Izumi"/></a>
 
-> Copyright (c) 2025 **[Izumi-Core](https://whatsapp.com/channel/0029VaJxgcB0bIdvuOwKTM2Y)**.
+> Copyright (c) 2025 
 
 **`¡GRACIAS POR PREFERIR ESTE PROYECTO!` ☕**
