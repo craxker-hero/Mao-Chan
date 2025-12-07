@@ -1,5 +1,5 @@
 console.clear()
-console.log('❀ Iniciando Michi Wa Bot...')
+console.log('❀ Iniciando Mao-chan...')
 
 import { join, dirname } from 'path'
 import { createRequire } from 'module'
