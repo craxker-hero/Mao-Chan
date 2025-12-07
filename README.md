@@ -7,7 +7,7 @@
 
 <div align="center">
 
- <a href="http://www.instagram.com/angelito.kzx" target="blank"><img src="https://img.shields.io/badge/Instagram-30302f?style=flat&logo=instagram" /></a>
+ <a href="https://www.instagram.com/sebas_.craxker?igsh=cm44dnRnOWUzaTl4" target="blank"><img src="https://img.shields.io/badge/Instagram-30302f?style=flat&logo=instagram" /></a>
 
 
 </p>
