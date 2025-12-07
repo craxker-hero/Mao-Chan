@@ -3,9 +3,9 @@ import chalk from 'chalk'
 import { fileURLToPath } from 'url'
 
 global.owner = [
-  ['59897246324', 'あ ┊ 𝐂𝐫𝐚𝐱𝐤𝐞𝐫', true],
+  ['542916439595', 'あ ┊ 𝐂𝐫𝐚𝐱𝐤𝐞𝐫', true],
 // reconocimiento por Lid
-  ['80363586105441', 'lid', 'izumi', true],
+  ['80363586105441', 'lid', 'あ ┊ 𝐂𝐫𝐚𝐱𝐤𝐞𝐫 ', true],
 ];
 
 global.mods = []
