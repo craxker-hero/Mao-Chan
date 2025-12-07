@@ -51,6 +51,6 @@ global.rcanal = {
 let file = fileURLToPath(import.meta.url)
 watchFile(file, () => {
   unwatchFile(file)
-  console.log(chalk.redBright("🔄 Se actualizó 'config.js'"))
+  console.log(chalk.redBright("↻ Se actualizó 'config.js'"))
   import(`${file}?update=${Date.now()}`)
 })
