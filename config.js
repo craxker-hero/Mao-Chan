@@ -3,7 +3,7 @@ import chalk from 'chalk'
 import { fileURLToPath } from 'url'
 
 global.owner = [
-  ['59897246324', 'Izumi', true],
+  ['59897246324', 'あ ┊ 𝐂𝐫𝐚𝐱𝐤𝐞𝐫', true],
 // reconocimiento por Lid
   ['80363586105441', 'lid', 'izumi', true],
 ];
