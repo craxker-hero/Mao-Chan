@@ -44,14 +44,14 @@ async function launch(scripts) {
     let child = fork()
 
     child.on('exit', (code) => {
-      console.log(`⚠️ Proceso terminado con código ${code}`)
+      console.log(`✧ Proceso terminado con código ${code}`)
       isWorking = false
       launch(scripts)
 
       if (code === 0) return
       watchFile(args[0], () => {
         unwatchFile(args[0])
-        console.log('🔄 Archivo actualizado, reiniciando...')
+        console.log('↻ Archivo actualizado, reiniciando...')
         launch(scripts)
       })
     })
